@@ -1,0 +1,42 @@
+<%- include('partials/header'); -%>
+
+
+<h1 class="title">Programuotojai API</h1>
+
+<div id="homepage">
+  <%- include('partials/navigation'); -%>
+  <h2>Pridėti naują programuotoją!</h2>
+  <div id="devs">
+    <div class="dev-container">
+
+      <form>
+        <label>Vardas: </label>
+        <input type="text" placeholder="Vardas" name="vardas" required>
+
+        <label>Technologijos: </label>
+        <input type="text" placeholder="Technologijos" name="tech" required>
+
+        <label>laisvas: </label>
+        <select name="laisvas">
+          <option value="true">TAIP</option>
+          <option value="false">NE</option>
+        </select>
+
+        <label>Koordinates: </label>
+        <label>Ilguma: </label>
+        <input type="number" placeholder="Ilguma" name="ilguma" step="any" required>
+        <label>platuma: </label>
+        <input type="number" placeholder="platuma" name="platuma" step="any" required>
+
+        <input type="submit" value="Prideti">
+      </form>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="/js/post.js"></script>
+
+
+<%- include('partials/footer'); -%>

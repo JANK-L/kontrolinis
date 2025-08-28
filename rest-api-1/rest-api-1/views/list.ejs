@@ -1,0 +1,37 @@
+<%- include('partials/header'); -%>
+
+
+<h1 class="title">Programuotojai API</h1>
+
+<div id="homepage">
+  <%- include('partials/navigation'); -%>
+  <h2>Sarasas programuotoju</h2>
+  <div id="devs">
+    <div class="dev-container">
+
+      <% devs.forEach(dev => {%>
+      <li>
+        <div class="box">
+          <span className="name"><%= dev.vardas%></span>
+
+          <span><a href="/api/edit/<%= dev._id%>">Koreguoti</a>
+            <%- include('partials/delButton', {dev}); -%></span>
+        </div>
+        <br>
+        <div class="box">
+          <span className="rank"><%= dev.tech.join(', ')%></span>
+          <span className="rank">Koordinates: <%= dev.location.coordinates.join(', ')%></span>
+        </div>
+      </li>
+
+      <% });%>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<%- include('partials/footer'); -%>
